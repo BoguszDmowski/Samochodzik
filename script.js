@@ -17,8 +17,9 @@ function carModel(model, przebieg) {
   }
 }
 
-let maluch = new carmodel('fiat', 1000);
-let polonez = new carmodel('polonez', 1000);
+let maluch = new carModel('fiat', 1000);
+let polonez = new carModel('polonez', 1000);
+
 
 
 // let myCar = {
