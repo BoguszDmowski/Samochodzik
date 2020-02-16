@@ -40,7 +40,7 @@ const gasTank = () => {
   myCar.tank = 50;
 }
 const fillFromCanister = () =>{
-  myCar.gasTank =++5;
+  myCar.gasTank =+5;
   
 }
 const carReposition = (positionChangeX, positionChangeY, rotation) => {
