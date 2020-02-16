@@ -12,9 +12,10 @@ const rightCar = 180
 //funkcja wyświetlania nazwy samochodu i wywołać
 
 //funkcja któa po wywołaniu doda span do htmla z nazwą modelu
-function carModel(model, przebieg, tank) {
-  this.model = model,
-  this.przebieg = przebieg,
+function carModel(carBrand,modelName, carMilage, tank) {
+  this.brand = carBrand,
+  this.model = modelName,
+  this.przebieg = carMilage,
   this.tank = tank,
   this.jedz = function(){
     this.przebieg += 5;
@@ -31,22 +32,23 @@ function carModel(model, przebieg, tank) {
   this.append = function() {
     this.el.innerHTML = `${this.model} `;
     document.body.appendChild(this.el);
-  }
+  };
   this.hide = function() {
     this.el.style.display = 'none';
-  }
+  };
   this.show = function() {
     this.el.style.display = 'inline-block';
-  }
+  };
   this.remove = function() {
     this.el.remove();
-  }
+  };
+  this.el.addEventListener('click', () => this.hide()) // genialne działające dodawanie funkcjonlności
 }
 
-let maluch = new carModel('maluch', 1000, 30);
-let polonez = new carModel('polonez', 1000, 40);
-let porshe = new carModel('porsche', 1000, 50);
-let volvo = new carModel('volvo', 1000, 50);
+let maluch = new carModel('fiat','maluch', 1000, 30);
+let polonez = new carModel('fiat','polonez', 1000, 40);
+let porshe = new carModel('porsche','carera', 1000, 50);
+let volvo = new carModel('volvo','xc60', 1000, 50);
 
 maluch.append();
 polonez.append();
