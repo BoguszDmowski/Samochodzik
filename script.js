@@ -13,7 +13,7 @@ function carModel(model, przebieg) {
   this.model = model,
   this.przebieg = przebieg,
   this.jedz = function(){
-    this.przebieg=+5;
+    this.przebieg += 5;
   }
 }
 
