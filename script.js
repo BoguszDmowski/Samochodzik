@@ -13,6 +13,7 @@ let myCar = {
   tank: 30,
   y: 100,
   x: 100,
+  canister: 30,
   showName: function(){
     console.log('seiko');
   },
