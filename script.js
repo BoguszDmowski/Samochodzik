@@ -8,18 +8,27 @@ const upCar = 90
 const downCar = 270
 const leftCar = 0
 const rightCar = 180
-
-function carModel(model, przebieg) {
+//bak, funkcja tankowania +5 do baku, 
+//funkcja wyświetlania nazwy samochodu i wywołać
+function carModel(model, przebieg, tank) {
   this.model = model,
   this.przebieg = przebieg,
+  this.tank = tank,
   this.jedz = function(){
     this.przebieg += 5;
     return this.przebieg
   }
+  this.fill = function() {
+    this.tank += 5;
+    return this.tank
+  }
+  this.model = function() {
+    return this.model
+  }
 }
 
-let maluch = new carModel('fiat', 1000);
-let polonez = new carModel('polonez', 1000);
+let maluch = new carModel('fiat', 1000, 30);
+let polonez = new carModel('polonez', 1000, 40);
 
 
 
