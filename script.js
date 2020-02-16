@@ -42,7 +42,8 @@ function carModel(carBrand,modelName, carMilage, tank) {
   this.remove = function() {
     this.el.remove();
   };
-  this.el.addEventListener('click', () => this.hide()) // genialne działające dodawanie funkcjonlności
+  this.el.addEventListener('click', () => this.hide()) // genialne działające dodawanie funkcjonlności, 
+  //jeśli wszystko zrobimy ze strzałką to możemy też wywoływać funkcję bez nawiasów
 }
 
 let maluch = new carModel('fiat','maluch', 1000, 30);
