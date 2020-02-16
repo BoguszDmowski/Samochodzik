@@ -22,7 +22,7 @@ function carModel(model, przebieg, tank) {
     this.tank += 5;
     return this.tank
   }
-  this.model = function() {
+  this.whatModel = function() {
     return this.model
   }
 }
