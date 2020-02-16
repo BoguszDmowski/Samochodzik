@@ -10,6 +10,8 @@ const leftCar = 0
 const rightCar = 180
 //bak, funkcja tankowania +5 do baku, 
 //funkcja wyświetlania nazwy samochodu i wywołać
+
+//funkcja któa po wywołaniu doda span do htmla z nazwą modelu
 function carModel(model, przebieg, tank) {
   this.model = model,
   this.przebieg = przebieg,
@@ -25,11 +27,31 @@ function carModel(model, przebieg, tank) {
   this.whatModel = function() {
     return this.model
   }
+  this.el = document.createElement('span');
+  this.append = function() {
+    this.el.innerHTML = `${this.model} `;
+    document.body.appendChild(this.el);
+  }
+  this.hide = function() {
+    this.el.style.display = 'none';
+  }
+  this.show = function() {
+    this.el.style.display = 'inline-block';
+  }
+  this.remove = function() {
+    this.el.remove();
+  }
 }
 
-let maluch = new carModel('fiat', 1000, 30);
+let maluch = new carModel('maluch', 1000, 30);
 let polonez = new carModel('polonez', 1000, 40);
+let porshe = new carModel('porsche', 1000, 50);
+let volvo = new carModel('volvo', 1000, 50);
 
+maluch.append();
+polonez.append();
+porshe.append();
+volvo.append();
 
 
 // let myCar = {
