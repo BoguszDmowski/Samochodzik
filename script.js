@@ -11,7 +11,10 @@ const rightCar = 180
 
 function carModel(model, przebieg) {
   this.model = model,
-  this.przebieg = przebieg
+  this.przebieg = przebieg,
+  this.jedz = function(){
+    this.przebieg=+5;
+  }
 }
 
 
